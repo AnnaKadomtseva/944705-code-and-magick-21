@@ -36,8 +36,8 @@ var EYES_COLORS = ['black',
 var setup = document.querySelector('.setup');
 setup.classList.remove('hidden');
 
-var similarWizardTemplate = document.querySelector('#similar-wizard-template').content;
-var setupSimilarItem = document.querySelector('.setup-similar-item');
+var similarWizardTemplate = document.querySelector('#similar-wizard-template');
+var setupSimilatItem = similarWizardTemplate.content.querySelector('.setup-similar-item');
 var similarListElement = setup.querySelector('.setup-similar-list');
 
 var getRandomItemFromArray = function (array) {
@@ -60,7 +60,7 @@ var generateArray = function (wizardsCount) {
 };
 
 var makeElement = function (wizard) {
-  var wizardElement = similarWizardTemplate.cloneNode(true);
+  var wizardElement = setupSimilatItem.cloneNode(true);
   wizardElement.querySelector('.setup-similar-label').textContent = wizard.name;
   wizardElement.querySelector('.wizard-coat').style.fill = wizard.coatColor;
   wizardElement.querySelector('.wizard-eyes').style.fill = wizard.eyesColor;
