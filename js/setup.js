@@ -36,24 +36,27 @@ var EYES_COLORS = ['black',
 var setup = document.querySelector('.setup');
 setup.classList.remove('hidden');
 
-var similarWizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
+var similarWizardTemplate = document.querySelector('#similar-wizard-template').content;
+var setupSimilarItem = document.querySelector('.setup-similar-item');
 var similarListElement = setup.querySelector('.setup-similar-list');
 
 var getRandomItemFromArray = function (array) {
-  var randomElement = array[Math.floor(Math.random() * array.length)];
+  var randomNumber = Math.random();
+  var randomElement = array[Math.floor(randomNumber * array.length)];
+
   return randomElement;
 };
 
 var generateArray = function (wizardsCount) {
-  var wizardsArray = [];
+  var wizards = [];
   for (var i = 0; i < wizardsCount; i++) {
-    wizardsArray[i] = {
+    wizards[i] = {
       name: getRandomItemFromArray(NAMES) + ' ' + getRandomItemFromArray(SURNAMES),
       coatColor: getRandomItemFromArray(COAT_COLORS),
       eyesColor: getRandomItemFromArray(EYES_COLORS)
     };
   }
-  return wizardsArray;
+  return wizards;
 };
 
 var makeElement = function (wizard) {
