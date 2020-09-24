@@ -9,7 +9,7 @@ var NAMES = ['Иван',
   'Юлия',
   'Люпита',
   'Вашингтон'
-]
+];
 var SURNAMES = ['да Марья',
   'Верон',
   'Мирабелла',
@@ -18,20 +18,20 @@ var SURNAMES = ['да Марья',
   'Топольницкая',
   'Нионго',
   'Ирвинг'
-]
+];
 var COAT_COLORS = ['rgb(101, 137, 164)',
   'rgb(241, 43, 107)',
   'rgb(146, 100, 161)',
   'rgb(56, 159, 117)',
   'rgb(215, 210, 55)',
   'rgb(0, 0, 0)'
-]
+];
 var EYES_COLORS = ['black',
   'red',
   'blue',
   'yellow',
   'green'
-]
+];
 
 var setup = document.querySelector('.setup');
 setup.classList.remove('hidden');
