@@ -64,17 +64,16 @@ var makeElement = function (wizard) {
   wizardElement.querySelector('.setup-similar-label').textContent = wizard.name;
   wizardElement.querySelector('.wizard-coat').style.fill = wizard.coatColor;
   wizardElement.querySelector('.wizard-eyes').style.fill = wizard.eyesColor;
-  var personElement = wizardElement;
-  return personElement;
+  return wizardElement;
 };
 
 var renderWizards = function (wizards) {
   var fragment = document.createDocumentFragment();
   for (var i = 0; i < wizards.length; i++) {
-    fragment.appendChild(makeElement(wizards[i]));
+    var resultWizardElement = makeElement(wizards[i]);
+    fragment.appendChild(resultWizardElement);
   }
-  var fragmentWizards = fragment;
-  return fragmentWizards;
+  return fragment;
 };
 
 var wizards = generateArray(WIZARDS_COUNT);
